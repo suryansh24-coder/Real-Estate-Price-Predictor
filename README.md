@@ -1,7 +1,6 @@
-::: {align="center"}
-`<img src="assets/homevalue-banner.svg" alt="HomeValue — House Price Prediction" width="100%" />`{=html}
+<img src="assets/homevalue-banner.svg" alt="HomeValue — House Price Prediction" width="100%" />
 
-`<br/>`{=html}
+<br/>
 
 # HomeValue
 
@@ -9,7 +8,7 @@
 
 **From tabular data to an interactive prediction experience.**
 
-`<br/>`{=html}
+<br/>
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-172554?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/UI-Streamlit-0F766E?style=flat-square&logo=streamlit&logoColor=white)](https://streamlit.io/)
@@ -17,13 +16,13 @@
 [![Pandas](https://img.shields.io/badge/Data-Pandas-334155?style=flat-square&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 [![Status](https://img.shields.io/badge/Status-Learning%20Project-64748B?style=flat-square)](#project-status)
 
-`<br/>`{=html}
+<br/>
 
 **[Overview](#-overview) · [Features](#-features) · [How It
 Works](#-how-it-works) · [Quick Start](#-quick-start) ·
 [Deployment](#-deployment) ·
 [Limitations](#-limitations--responsible-use)**
-:::
+
 
 ------------------------------------------------------------------------
 
@@ -96,7 +95,7 @@ The diagram below illustrates the intended user journey and the major
 components. It is an architecture illustration, **not a screenshot of a
 deployed application**.
 
-`<img src="assets/homevalue-architecture.svg" alt="HomeValue architecture: user form, Streamlit application, saved Random Forest pipeline, and prediction result" width="100%" />`{=html}
+<img src="assets/homevalue-architecture.svg" alt="HomeValue architecture: user form, Streamlit application, saved Random Forest pipeline, and prediction result" width="100%" />
 
 ### Prediction flow
 
