@@ -4,6 +4,7 @@ import math
 import joblib
 import pandas as pd
 import streamlit as st
+import textwrap
 
 
 # ============================================================
@@ -486,45 +487,39 @@ with st.sidebar:
         "property appraisal and should not be used as the sole "
         "basis for a purchase, sale, loan, or investment decision."
     )
-
-
 # ============================================================
 # HERO SECTION
 # ============================================================
 
-st.markdown(
-    """
-    <div class="brand">
-        <span class="brand-icon">⌂</span>
-        HOMEVALUE
-        <span style="color:#a48650;">/</span>
-        PROPERTY INTELLIGENCE
+st.html("""
+<div class="brand">
+    <span class="brand-icon">⌂</span>
+    HOMEVALUE
+    <span style="color:#a48650;">/</span>
+    PROPERTY INTELLIGENCE
+</div>
+
+<div class="hero">
+    <div class="hero-label">
+        A smarter way to explore property values
     </div>
 
-    <div class="hero">
-        <div class="hero-label">
-            A smarter way to explore property values
-        </div>
+    <h1>
+        Discover your property's<br>
+        estimated value.
+    </h1>
 
-        <h1>
-            Discover your property's<br>
-            estimated value.
-        </h1>
+    <p>
+        Explore an estimated property value using a trained
+        machine-learning model and the property characteristics
+        available in your dataset.
+    </p>
 
-        <p>
-            Explore an estimated property value using a trained
-            machine-learning model and the property characteristics
-            available in your dataset.
-        </p>
-
-        <span class="hero-badge">
-            Machine Learning &nbsp;·&nbsp; Property Analytics
-        </span>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
-
+    <span class="hero-badge">
+        Machine Learning &nbsp;·&nbsp; Property Analytics
+    </span>
+</div>
+""")
 
 # ============================================================
 # PROPERTY INPUT FORM
@@ -838,23 +833,20 @@ if submitted:
 # FOOTER
 # ============================================================
 
-st.markdown(
-    """
-    <div class="footer">
+st.html("""
+<div class="footer">
 
-        <strong style="color:#234735;">
-            HOMEVALUE
-        </strong>
+    <strong style="color:#234735;">
+        HOMEVALUE
+    </strong>
 
-        &nbsp; · &nbsp; Built with Python, Pandas,
-        scikit-learn and Streamlit.
+    &nbsp; · &nbsp; Built with Python, Pandas,
+    scikit-learn and Streamlit.
 
-        <br>
+    <br><br>
 
-        An educational machine-learning project.
-        Predictions are estimates, not professional valuations.
+    An educational machine-learning project.
+    Predictions are estimates, not professional valuations.
 
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
+</div>
+""")
