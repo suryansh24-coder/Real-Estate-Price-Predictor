@@ -11,7 +11,7 @@ from sklearn.pipeline import Pipeline
 BASE_DIR = Path(__file__).resolve().parent
 DATA_PATH = BASE_DIR / "indian.csv"
 MODEL_PATH = BASE_DIR / "house_price_model.joblib"
-TARGET = "MEDV"
+TARGET = "MEDV_LAKH"
 
 
 def main():
@@ -29,7 +29,7 @@ def main():
     ])
     model.fit(X_train, y_train)
     predictions = model.predict(X_test)
-    print(f"MAE: {mean_absolute_error(y_test, predictions):.3f} ($1000s in dataset units)")
+    print(f"MAE: {mean_absolute_error(y_test, predictions):.3f} INR lakh")
     print(f"R²:  {r2_score(y_test, predictions):.3f}")
     joblib.dump({"model": model, "features": list(X.columns), "target": TARGET}, MODEL_PATH)
     print(f"Saved model to {MODEL_PATH}")
