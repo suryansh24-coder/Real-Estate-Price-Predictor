@@ -1,0 +1,15 @@
+column,original,description,units
+CRIME_RATE,CRIM,Cognizable crimes (BNS) per 1 lakh population,per lakh
+PLOTTED_ZONE_PCT,ZN,Residential land zoned for large plots / low density,%
+INDUS_PCT,INDUS,Non-retail business / industrial land,%
+WATERFRONT,CHAS,1 if tract borders a river / lake / sea,0/1
+NO2,NOX,Annual mean NO2 (CPCB annual standard 40),ug/m3
+ROOMS,RM,Rooms per dwelling excl. kitchen/bath (2 BHK = 3),rooms
+AGE_30PLUS_PCT,AGE,Dwellings 30+ years old,%
+DIST_HUBS_KM,DIS,Weighted distance to major employment hubs,km
+TRANSIT_INDEX,RAD,Accessibility to metro / rail / ring road,index 1-24
+PROP_TAX_PER_10L,TAX,Annual property tax per INR 10 lakh of property value,INR
+PTR,PTRATIO,Pupil-teacher ratio in local schools,students per teacher
+SLUM_POOR_PCT,LSTAT,Households in slums / informal housing or deprived,%
+FEMALE_LITERACY_PCT,B,Female literacy rate (replaces race-derived B index),%
+MEDV_LAKH,MEDV,Median home value,INR lakh
