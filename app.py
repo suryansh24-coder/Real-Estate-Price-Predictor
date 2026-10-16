@@ -734,67 +734,49 @@ if submitted:
             unsafe_allow_html=True,
         )
 
-        st.markdown(
-            f"""
-            <div class="result-card">
-
-                <div class="result-label">
-                    Estimated property value
-                </div>
-
-                <div class="result-price">
-                    ₹{price_lakh:,.2f} lakh
-                </div>
-
-                <div class="result-note">
-                    Approximately ₹{price_crore:,.2f} crore.
-                    <br>
-                    This is a machine-learning prediction,
-                    not a confirmed market valuation.
-                </div>
-
+        result_html = f"""
+        <div class="result-card">
+            <div class="result-label">
+                Estimated property value
             </div>
-            """,
-            unsafe_allow_html=True,
-        )
+
+            <div class="result-price">
+                ₹{price_lakh:,.2f} lakh
+            </div>
+
+            <div class="result-note">
+                Approximately ₹{price_crore:,.2f} crore.<br>
+                This is a machine-learning prediction,
+                not a confirmed market valuation.
+            </div>
+        </div>
+        """
+
+        st.html(result_html)
+
+        # ====================================================
+        # MODEL SUMMARY CARDS
+        # ====================================================
 
         metric_columns = st.columns(3)
+    
 
-        with metric_columns[0]:
+        metric_data = [
+            ("Input features", str(len(features))),
+            ("ML algorithm", "Random Forest"),
+            ("Prediction status", "Complete"),
+        ]
 
-            st.markdown(
-                f"""
+        for column, (label, value) in zip(
+            metric_columns, metric_data
+        ):
+            with column:
+                st.html(f"""
                 <div class="metric-card">
-                    <div class="metric-label">Input features</div>
-                    <div class="metric-value">{len(features)}</div>
+                    <div class="metric-label">{label}</div>
+                    <div class="metric-value">{value}</div>
                 </div>
-                """,
-                unsafe_allow_html=True,
-            )
-
-        with metric_columns[1]:
-
-            st.markdown(
-                """
-                <div class="metric-card">
-                    <div class="metric-label">ML algorithm</div>
-                    <div class="metric-value">Random Forest</div>
-                </div>
-                """,
-                unsafe_allow_html=True,
-            )
-
-        with metric_columns[2]:
-
-            st.markdown(
-                """
-                <div class="metric-card">
-                    <div class="metric-label">Prediction status</div>
-                    <div class="metric-value">Complete</div>
-                </div>
-                """,
-                unsafe_allow_html=True,
-            )
+                """)
 
         st.info(
             "Important: the result is generated from the supplied "
